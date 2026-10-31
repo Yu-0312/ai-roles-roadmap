@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 新興職位學習地圖</title>
+<meta name="description" content="12 個因 AI 而興起的科技職位,每個都有從入門到上手的互動式學習路線:可勾選進度、標示本週、依背景篩選。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="hub">
+<div class="wrap">
+  <header class="hero">
+    <h1>AI 新興職位學習地圖</h1>
+    <p class="lead">整理 12 個因 AI 而興起或大幅成長的職位,每個都附一條從入門到能上手的互動學習路線。先依你的背景篩選,再點進職位開始勾選進度。</p>
+    <div class="toolbar">
+      <button id="exportAll">匯出全部進度</button>
+      <button id="importAll">匯入進度</button>
+      <button id="theme" aria-label="切換深淺色">深淺色</button>
+      <input type="file" id="importFile" accept="application/json" hidden>
+    </div>
+  </header>
+
+  <div class="card pad">
+    <p style="margin:0;font-size:15px">LinkedIn 的 2026 年快速成長職位榜上,<b>AI 工程師連續第二年排名第一</b>,AI 顧問與策略師、資料標註等職位也上榜。世界經濟論壇預估,到 2030 年 AI 與資訊處理技術將創造約 1,100 萬個職位,同時取代約 900 萬個。下面這 12 個職位,是職缺與業界文章中反覆出現、而且有明確入門路徑的類別。</p>
+  </div>
+
+  <h2>依背景找職位</h2>
+  <div class="chips" id="chips" role="group" aria-label="依背景篩選"></div>
+  <div class="hub-controls">
+    <span class="note" id="filterInfo"></span>
+    <label class="inline">排序
+      <select id="sort">
+        <option value="default">預設</option>
+        <option value="weeks">學習週數:少到多</option>
+        <option value="level">技術門檻:低到高</option>
+        <option value="progress">我的進度:高到低</option>
+      </select>
+    </label>
+  </div>
+  <div class="grid" id="grid"></div>
+
+  <h2>職位比較</h2>
+  <div class="card tbl"><table>
+    <thead><tr><th>職位</th><th>一句話說明</th><th>技術門檻</th><th>適合背景</th><th>路線長度</th></tr></thead>
+    <tbody id="compare"></tbody></table></div>
+  <p class="note">週數以每週投入 10 至 15 小時估算;已有相關背景的人通常可以跳過第一階段。</p>
+
+  <h2>也在成長、但未收錄的職位</h2>
+  <div class="card pad">
+    <ul style="margin:0;padding-left:20px;font-size:14px">
+      <li><b>AI / 機器學習研究員</b>:設計與測試新模型與演算法,通常需要研究所背景與論文發表,不適合用幾個月的路線入門。</li>
+      <li><b>資料中心技術員、試運轉(commissioning)經理</b>:AI 帶動資料中心擴建而大幅成長,但屬於硬體與機電領域。</li>
+      <li><b>Agent 監督員、內部自動化工程師</b>:業界已開始出現的新頭銜,職責與本站的 AI 自動化專家、Agent 工程師重疊。</li>
+      <li><b>AI 信任與安全負責人、AI 法務顧問</b>:內容分別併入本站的 AI 紅隊與 AI 治理路線。</li>
+    </ul>
+  </div>
+
+  <h2>資料來源</h2>
+  <ul class="src">
+    <li><a href="https://www.dice.com/career-advice/ai-related-jobs-top-linkedins-fastest-growing-roles-list-for-2026" target="_blank" rel="noopener">Dice:AI-related Jobs Top LinkedIn's Fastest-growing Roles List for 2026</a></li>
+    <li><a href="https://weforum.org/stories/2025/01/future-of-jobs-report-2025-the-fastest-growing-and-declining-jobs/" target="_blank" rel="noopener">World Economic Forum:Future of Jobs Report 2025</a></li>
+    <li><a href="https://letsdatascience.com/news/companies-identify-20-agentic-ai-jobs-for-2026-598e685f" target="_blank" rel="noopener">Let's Data Science:Companies Identify 20 Agentic AI Jobs for 2026</a></li>
+    <li><a href="https://theaicareerlab.com/blog/agentic-ai-jobs-guide-2026/raw" target="_blank" rel="noopener">The AI Career Lab:The Agentic-AI Job Guide</a></li>
+  </ul>
+  <p class="note">各職位頁另列其專屬來源。資料整理於 2026 年 10 月,薪資多為美國市場的非官方統計,僅供參考。</p>
+  <footer>進度只存在這台瀏覽器的 localStorage,不會上傳。換裝置時請用「匯出全部進度」。</footer>
+</div>
+<script src="assets/roles/_registry.js"></script>
+<script src="assets/roles/fde.js"></script>
+<script src="assets/roles/ai-engineer.js"></script>
+<script src="assets/roles/agent-engineer.js"></script>
+<script src="assets/roles/eval-engineer.js"></script>
+<script src="assets/roles/llmops.js"></script>
+<script src="assets/roles/ai-pm.js"></script>
+<script src="assets/roles/ai-consultant.js"></script>
+<script src="assets/roles/automation.js"></script>
+<script src="assets/roles/ai-ux.js"></script>
+<script src="assets/roles/ai-trainer.js"></script>
+<script src="assets/roles/red-team.js"></script>
+<script src="assets/roles/governance.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
